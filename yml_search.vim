@@ -1,6 +1,6 @@
-" fuck
-fun! YmlSearch()
+function! Yml(...)
     echo "Starting search by currently open yml file ..."
-endfun
+    echo a:1
+endfunction
 
-command! -nargs=0 YmlSearch call YmlSearch() 
+command! -nargs=* Yml call Yml(<q-args>)
